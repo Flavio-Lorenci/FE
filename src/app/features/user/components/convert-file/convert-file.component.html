@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Convert File</h1>
+  <div class="status-container">
+    <h2>{{ statusCalculate?.status }}</h2>
+  </div>
+  @if (isInputActive) {
+  <input type="file" name="file" (input)="onFileSelected($event)" />
+  }
+  @if (statusCalculate?.status === 'finished' ) {
+  <button class="downolad-button" mat-raised-button>
+    <a [href]="downloadLink">Download</a>
+  </button>
+  }
+</div>
